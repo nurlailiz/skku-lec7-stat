@@ -27,6 +27,15 @@ switch (command) {
     case "max":
         result = lib.max(numbers);
         break;
+    case "med":
+        result = lib.med(numbers);
+        break;
+    case "iqr":
+        result = lib.iqr(numbers);
+        break;
+    case "outlier":
+        result = lib.outlier(numbers);
+        break;
     default:
         console.log("Wrong command!");
         process.exit(1);
