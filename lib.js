@@ -82,6 +82,7 @@ function iqr(numbers) {
 }
 
 function outlier(numbers) {
+    let originalnum = numbers.slice();
     let lenofnum = (numbers.length);
     let sortednum = numbers.sort(sortNumber);
 
@@ -130,8 +131,8 @@ function outlier(numbers) {
     let j = 0;
 
     for (let i = 0; i < lenofnum; i++){
-        if ((numbers[i] > upperbound) || (numbers[i] < lowerbound)){
-            res[j] = numbers[i];
+        if ((originalnum[i] > upperbound) || (originalnum[i] < lowerbound)){
+            res[j] = originalnum[i];
             j++;
         }
         else{
@@ -139,12 +140,13 @@ function outlier(numbers) {
         }
     } 
 
-    /*
+    
     for(let k = 0; k < res.length; k++){
         console.log(res[k]);
     }
-    */
-    return res.forEach(element => console.log(element));
+    
+    
+    //res.forEach(element => console.log(element));
     //return console.log(res[]);
 }
 

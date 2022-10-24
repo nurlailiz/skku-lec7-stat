@@ -35,6 +35,7 @@ switch (command) {
         break;
     case "outlier":
         result = lib.outlier(numbers);
+        return result;
         break;
     default:
         console.log("Wrong command!");
